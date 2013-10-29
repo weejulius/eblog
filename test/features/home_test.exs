@@ -8,4 +8,9 @@ defmodule HomeTest do
     conn = get("/")
     assert conn.status == 200
   end
+
+  test "create article" do
+    article = Article.new(title: "hell")
+    assert article.title == "hell"
+  end
 end
